@@ -22,7 +22,6 @@ for filename in os.listdir(data_folder):
         l = soup.find("a", href=True)
         link = "https://bigbasket.in" + l["href"] if l else "NA"
 
-        # Extract ratings (default: "NA" if missing)
         r = soup.find("span", attrs={"class": 'Label-sc-15v1nk5-0 Badges___StyledLabel-sc-1k3p1ug-0 gJxZPQ kAyiFy leading-xxs'})
         ratings = r.get_text(strip=True) if r else "NA"
 

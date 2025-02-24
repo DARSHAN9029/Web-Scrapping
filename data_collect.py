@@ -15,7 +15,6 @@ for filename in os.listdir(data_folder):
 
         soup = BeautifulSoup(html_doc, 'html.parser')
 
-        # Extract title (default: "NA" if missing)
         t = soup.find("h3")
         title = t.get_text(strip=True) if t else "NA"
 
